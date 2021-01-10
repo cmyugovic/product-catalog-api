@@ -6,6 +6,7 @@
   "author": "Carlos Molina <47950385+cmyugovic@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.11.11"
   },
