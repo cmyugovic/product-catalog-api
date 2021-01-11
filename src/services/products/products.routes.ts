@@ -6,5 +6,6 @@ ProductsRouter.route("/")
   .post(ProductsController.create);
 
 ProductsRouter.route("/:productId")
+  .get(ProductsController.show)
   .put(ProductsController.update)
   .delete(ProductsController.delete);
