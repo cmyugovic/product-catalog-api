@@ -1,5 +1,4 @@
 import mongoose = require("mongoose");
-import { NextFunction } from "express";
 import { IProductDocument } from "./products.interface";
 
 const schema = new mongoose.Schema(

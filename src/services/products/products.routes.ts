@@ -1,8 +1,10 @@
 import { Router } from "express";
-import ProductsValidation from "./products.validation";
 import ProductsController from "./products.controller";
 export const ProductsRouter = Router();
-ProductsRouter.route("/").get(
-  ProductsValidation.index,
-  ProductsController.index
-);
+ProductsRouter.route("/")
+  .get(ProductsController.index)
+  .post(ProductsController.create);
+
+ProductsRouter.route("/:productId")
+  .put(ProductsController.update)
+  .delete(ProductsController.delete);

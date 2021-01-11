@@ -2,6 +2,8 @@ require("dotenv").config();
 import express from "express";
 import routes from "./src/routes";
 require("./src/config/database");
+import cors = require("cors");
+import bodyParser = require("body-parser");
 
 class App {
   public app = express();
@@ -16,6 +18,8 @@ class App {
   }
 
   constructor() {
+    this.app.use(cors());
+    this.app.use(bodyParser.json({ limit: "50mb" }));
     this.app.use(routes);
   }
 }
